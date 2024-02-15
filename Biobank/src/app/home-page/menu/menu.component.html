@@ -1,0 +1,5 @@
+<p-menubar [model]="items"  >
+        <ng-template pTemplate="item" let-item >
+                        <div class="btn btn-2 item"  (click)="clickMenu(item)">{{ item.label }}</div>
+        </ng-template>
+</p-menubar>

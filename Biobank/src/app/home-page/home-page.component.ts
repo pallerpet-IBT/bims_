@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Input } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'home-page',
@@ -7,5 +8,17 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+  constructor(private elementRef: ElementRef) {}
+
+  setAnchor(anchor: string) {
+    //console.log('anchor:', anchor );
+    //console.log('elementRef:', this.elementRef );
+    const element = this.elementRef.nativeElement.querySelector('#' + anchor);
+    //console.log('element:', element );
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+    }
+  }
   
 }
