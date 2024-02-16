@@ -5,20 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MenuComponent } from './home-page/menu/menu.component';
-import { MenuModule } from 'primeng/menu';
 import { MenubarModule } from 'primeng/menubar';
+import { CarouselModule } from 'primeng/carousel';
+import { FeaturesComponent } from './home-page/features/features.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    MenuComponent
+    MenuComponent,
+    FeaturesComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MenubarModule
+    MenubarModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,19 @@
+<h4>FEATURES</h4>
+<p-carousel [value]="products" 
+    [numVisible]="1" 
+    [numScroll]="1" [circular]="true" 
+    [responsiveOptions]="responsiveOptions" 
+    [autoplayInterval]=10000 
+    [style]="{'z-index':'1'}">
+
+    <ng-template let-product pTemplate="item">
+        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+            <div class="mb-3">
+                <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-6 shadow-2" />
+            </div>
+            <div>
+                <h4 class="mb-1">{{ product.name }}</h4>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>

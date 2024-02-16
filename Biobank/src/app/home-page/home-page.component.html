@@ -1,85 +1,80 @@
-<div class="overflow-hidden">
-    <div class="overflow-auto" style="height: 1000px">
-        <div>
-
-            <div class="m-5">
-                <h2>Biobank Information Management System (BIMS) </h2>
-                <h4>Tailor-made solution to precisely match your needs  </h4>
-                <h5>Manage, Store & Analyse for research </h5>
-            </div>
-
-            
-            <div class="sticky top-0">
-                <menu (messageEvent)="setAnchor($event)"></menu>
-            </div>
-            
-            <div class="block mx-5 surface-200-bg">
-
-                <section id="bims" class="p-3 beige-bg">
-                    <p class="wrap">The Biobank Information Management System (BIMS) is a cutting-edge software solution designed to revolutionize the management of biospecimens and sensitive biometric data within biobanks. By utilizing BIMS, researchers can harness the power of these resources for innovative and future-focused research endeavors.  </p>
-                    <p class="wrap">BIMS offers secured traceability of critical data throughout its entire lifecycle—from collection and processing to storage and distribution—ensuring that all research conducted is ethical, reproducible, and of the highest quality. </p>
-                    <p class="wrap">The centralized storage capabilities of BIMS allow for the seamless management of speciments and aliquots across multiple locations, all accessible from one user-friendly platform. Its robust structure guarantees a high degree of availability and security for all users, instilling confidence in the system's reliability. </p>
-                </section>
-
-                <section id="advantages" class="my-8">
-                    <ul>
-                        <li>Traceability of each specimen and aliquot</li>
-                        <li>Centralized storage management  </li>
-                        <li>Workflow support </li>
-                        <li>Customizable user management</li>
-                        <li>Interoperability with high level of security</li>
-                        <li>Built-in Analytics & Reporting features</li>
-                        <li>Robust, fault tolerant system </li>
-                    </ul>
-                </section>
-                
-                <section id="features" class="my-8">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                </section>
-        
-                <section id="demovideo" class="my-8">
-                    <p>demovideo</p><br>
-                    <p>demovideo</p><br>
-                    <p>demovideo</p><br>
-                    <p>demovideo</p><br>
-                    <p>demovideo</p><br>
-                    <!-- <iframe width="1000" height="750" 
-                        src="https://player.vimeo.com/video/403530213" 
-                        frameborder="0" 
-                        allow="autoplay; encrypted-media" 
-                        allowfullscreen="">
-                    </iframe> -->
-                </section>
-                    
-                <section id="ourteam" class="my-8">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                </section>
-                
-                <section id="contact" class="my-8">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
-                </section>
-
-            </div>
-        </div>
-        
+<div class="flex flex-column align-items-center">
+    <div class="m-5">
+        <h2>Biobank Information Management System (BIMS) </h2>
+        <h4>Tailor-made solution to precisely match your needs  </h4>
+        <h5>Manage, Store & Analyse for research </h5>
     </div>
+    
+    <div class="sticky top-0 z-5">
+        <menu (messageEvent)="setAnchor($event)"></menu>
+    </div>
+    
+    <div class="flex flex-column align-items-center justify-content-center mx-5 surface-200-bg lg:w-8">
 
-    <!-- <footer class="dark-bg">
-        <p class="white-text text-center p-5 mb-0">2024 | IBT</p>
-    </footer> -->
+        <section id="bims" class="">
+            <h4>About BIMS</h4>
+            <p class="wrap">The Biobank Information Management System (BIMS) is a cutting-edge software solution designed to revolutionize the management of biospecimens and sensitive biometric data within biobanks. By utilizing BIMS, researchers can harness the power of these resources for innovative and future-focused research endeavors.  </p>
+            <p class="wrap">BIMS offers secured traceability of critical data throughout its entire lifecycle—from collection and processing to storage and distribution—ensuring that all research conducted is ethical, reproducible, and of the highest quality. </p>
+            <p class="wrap">The centralized storage capabilities of BIMS allow for the seamless management of speciments and aliquots across multiple locations, all accessible from one user-friendly platform. Its robust structure guarantees a high degree of availability and security for all users, instilling confidence in the system's reliability. </p>
+        </section>
+
+        <section id="advantages" class="my-8">
+            <h4>ADVANTAGES</h4>
+            <ul>
+                <li>Traceability of each specimen and aliquot</li>
+                <li>Centralized storage management  </li>
+                <li>Workflow support </li>
+                <li>Customizable user management</li>
+                <li>Interoperability with high level of security</li>
+                <li>Built-in Analytics & Reporting features</li>
+                <li>Robust, fault tolerant system </li>
+            </ul>
+        </section>
+        
+        <section id="features" class="flex flex-column my-8">
+           <features></features>
+        </section>
+
+        <section id="demovideo" class="flex flex-column my-8">
+
+            <h4>DEMO VIDEO</h4>
+            <!-- <div class="video-container">
+                <iframe
+                    src="https://player.vimeo.com/video/912857615"
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen="">
+                 </iframe>
+            </div> -->
+        </section>
+            
+        <section id="ourteam" class="my-8">
+            <h4>OUR TEAM</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+        </section>
+        
+        <section id="contact" class="my-8">
+            <h4>CONTACT US</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><br>
+        </section>
+
+    </div>
 </div>
+
+<footer class="dark-bg">
+    <p class="white-text text-center p-5 mb-0">2024 | IBT</p>
+</footer>
+
+
+
 
 
 
