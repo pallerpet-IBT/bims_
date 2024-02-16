@@ -1,6 +1,7 @@
 :host ::ng-deep {
     .p-menubar {
         background-color: #54ccb4;
+        border-radius: 0;
     }
 
     // p-menubarsub.p-element {
@@ -15,10 +16,15 @@
         display: block;
     }
 
-    .p-menubar .p-menuitem-content:hover {
+    .p-menuitem-content {
+      background: transparent!important;
+    }
+
+    .p-menuitem-content:hover {
         color: transparent;
         background: transparent;
     }
+
 
     @media screen and (max-width: 960px) {
 
