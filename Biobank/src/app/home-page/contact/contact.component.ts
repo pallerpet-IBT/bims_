@@ -1,6 +1,14 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
+import { NgForm } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { Message } from 'primeng/api';
+
+export interface EmailForm {
+  userName: string;
+  company: string;
+  message: string;
+  userEmail: string;
+}
 
 
 @Component({
@@ -10,17 +18,18 @@ import { Message } from 'primeng/api';
 })
 export class ContactComponent {
 
-  company ='';
+  emailForm: EmailForm = {
+    userName: '',
+    company: '',
+    message: '',
+    userEmail: ''
+  };
 
   messages: Message[] | undefined;
 
   //emailForm: any = {};
-  emailForm = {
-    "userName": '',
-    "company": '',
-    "message": '',
-    "userEmail": '',
-  };
+
+  constructor(){}
   
   
   public sendEmail(e: Event) {

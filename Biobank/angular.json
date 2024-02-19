@@ -32,7 +32,6 @@
             "styles": [
               "node_modules/primeflex/primeflex.scss",
               "src/styles.scss"
-              //"src/assets/fonts/helvetica-neue_lt_pro_53_extended.otf"
             ],
             "scripts": []
           },
