@@ -1,28 +1,30 @@
-<!-- <p>works</p> -->
+<form #emailForm="ngForm" appIdentityRevealed class="contact-form line-height-3" (ngSubmit)="sendEmail($event)">
+    <h3>Hi,</h3>
+    <span>I am</span>
 
-<form #emailForm="ngForm" appIdentityRevealed (submit)="sendEmail($event)" class="contact-form line-height-3">
-  <h3>Hi,</h3>
-  <span>I am</span>
+    <input pInputText type="text" name="userName" placeholder="name" required class="mx-2"
+    [(ngModel)]="emailForm.value.userName">
 
-  <input pInputText type="text" name="userName" placeholder="name" required class="mx-2"
-  [(ngModel)]="emailForm.value.userName">
+    from 
+    <input pInputText [(ngModel)]="emailForm.value.company" size="31" type="text" name="company" placeholder="company" required class="mx-2">
+    <br>
+      
+    I am contacting you because
+    <textarea pInputTextarea required [(ngModel)]="emailForm.value.message" cols="49" name="message" placeholder="message" class="minw- m-2 vertical-align-middle"></textarea>
+    <br>
 
-  from 
-  <input pInputText [(ngModel)]="emailForm.value.company" type="text" name="company" placeholder="company" required class="mx-2">
-  <br>
-    
-  I am contacting you because
-  <textarea pInputTextarea required [(ngModel)]="emailForm.value.message" cols=39 name="message" placeholder="message" class="minw- m-2 vertical-align-middle"></textarea>
-  <br>
+    I look forward to your answer at email
+    <input [(ngModel)]="emailForm.value.email" pInputText type="email" name="userEmail" ngModel required email size="38" placeholder="email" class="mx-2">
+    <div *ngIf="emailForm.controls['userEmail']?.errors?.['email'] && emailForm.controls['userEmail'].touched"
+          [ngStyle]="{ color: 'var(--red-600)', padding: '1rem'}">
+      * incorrect email format
+    </div>
+    <br>
 
-  I look forward to your answer at email
-  <input pInputText [(ngModel)]="emailForm.value.userEmail" size=27 type="email" name="userEmail" placeholder="email" required class="mx-2">
-  <br>
-
-  <div class="mt-4 my-5">
-    <p-button label="Submit" [disabled]="emailForm.invalid !== null && emailForm.invalid"></p-button>
-  </div>
-  <div class="card">
-    <p-messages *ngIf="messages" [(value)]="messages" [enableService]="false" [closable]="false"></p-messages>
-  </div>
+    <div class="mt-4">
+      <button pButton pRipple label="Submit" [disabled]="emailForm.invalid !== null && emailForm.invalid"></button>
+    </div>
+    <div class="card">
+      <p-messages *ngIf="messages" [(value)]="messages" [enableService]="false" [closable]="false"></p-messages>
+    </div>
 </form>

@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild} from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component } from '@angular/core';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { Message } from 'primeng/api';
 
@@ -9,7 +8,6 @@ export interface EmailForm {
   message: string;
   userEmail: string;
 }
-
 
 @Component({
   selector: 'contact',
@@ -22,22 +20,20 @@ export class ContactComponent {
     userName: '',
     company: '',
     message: '',
-    userEmail: ''
+    userEmail: '',
   };
 
   messages: Message[] | undefined;
 
-  //emailForm: any = {};
-
-  constructor(){}
-  
-  
   public sendEmail(e: Event) {
     e.preventDefault();
+    console.log('sendEmail', e);
 
     emailjs
-      .sendForm('service_jfgatfv', 'template_ze9iv0a', e.target as HTMLFormElement, {
-        publicKey: '1tStIbhiFy7Y4aKWO',
+      //.sendForm('service_jfgatfv', 'template_ze9iv0a', e.target as HTMLFormElement, {
+      //publicKey: '1tStIbhiFy7Y4aKWO',
+      .sendForm('service_uiedg7x', 'template_o1jsn3m', e.target as HTMLFormElement, {
+        publicKey: '8MIUeQwrJghC6u4Xl',
       })
       .then(
         () => {
@@ -53,7 +49,7 @@ export class ContactComponent {
   showMessage(){
     this.messages = [{ severity: 'success', summary: 'Success', detail: 'Message Content' }];
     setTimeout(() => {
-      this.messages = []; // Az üzenetek törlése
-    }, 3000); // 3 másodperc (3000 milliszekundum) után
+      this.messages = [];
+    }, 3000); 
   }
 }
