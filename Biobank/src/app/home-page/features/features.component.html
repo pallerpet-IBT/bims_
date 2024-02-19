@@ -1,19 +1,66 @@
-<h4>FEATURES</h4>
-<p-carousel [value]="products" 
-    [numVisible]="1" 
-    [numScroll]="1" [circular]="true" 
-    [responsiveOptions]="responsiveOptions" 
-    [autoplayInterval]=10000 
-    [style]="{'z-index':'1'}">
+<h2>FEATURES</h2>
+<div class="flex flex-row align-items-center lg:ml-4">
+    <div class="mb-7">
+        <h4>Feature 1</h4>
+        <p class="">Description for feature 1, description for feature 1, description for feature 1</p>
+    </div>
+    <p-carousel [value]="products"
+        [numVisible]="1"
+        [numScroll]="1" [circular]="true"
+        [responsiveOptions]="responsiveOptions"
+        [autoplayInterval]=10000
+        [style]="{'z-index':'1'}">
+    
+        <ng-template let-product pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center p-1">
+                <div class="align-items-center">
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-full shadow-2" />
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
 
-    <ng-template let-product pTemplate="item">
-        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
-            <div class="mb-3">
-                <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-6 shadow-2" />
+<div class="flex flex-row align-items-center lg:ml-4">
+    <div class="mb-7">
+        <h4>Feature 2</h4>
+        <p class="">Description for feature 2, description for feature 2, description for feature 2</p>
+    </div>
+    <p-carousel [value]="products"
+        [numVisible]="1"
+        [numScroll]="1" [circular]="true"
+        [responsiveOptions]="responsiveOptions"
+        [autoplayInterval]=10000
+        [style]="{'z-index':'1'}">
+    
+        <ng-template let-product pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center p-1">
+                <div class="align-items-center">
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-full shadow-2" />
+                </div>
             </div>
-            <div>
-                <h4 class="mb-1">{{ product.name }}</h4>
+        </ng-template>
+    </p-carousel>
+</div>
+
+<div class="flex flex-row align-items-center lg:ml-4">
+    <div class="mb-7">
+        <h4>Feature 3</h4>
+        <p class="">Description for feature 3, description for feature 3, description for feature 3</p>
+    </div>
+    <p-carousel [value]="products"
+        [numVisible]="1"
+        [numScroll]="1" [circular]="true"
+        [responsiveOptions]="responsiveOptions"
+        [autoplayInterval]=10000
+        [style]="{'z-index':'1'}">
+    
+        <ng-template let-product pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center p-1">
+                <div class="align-items-center">
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-full shadow-2" />
+                </div>
             </div>
-        </div>
-    </ng-template>
-</p-carousel>
+        </ng-template>
+    </p-carousel>
+</div>

@@ -15,17 +15,17 @@ export class FeaturesComponent {
 
     this.products = [
       {
-      name: 'Bamboo Watch',
+      name: 'Description for feature 1, description for feature 1, description for feature 1',
       image: 'bamboo-watch.jpg',
       price: 65,
      },
      {
-      name: 'Blue T-shirt',
+      name: 'Description for feature 2, description for feature 2, description for feature 2',
       image: 'blue-t-shirt.jpg',
       price: 65,
      },
      {
-      name: 'Gaming set',
+      name: 'Description for feature 3, description for feature 3, description for feature 3',
       image: 'gaming-set.jpg',
       price: 65,
      }

@@ -8,22 +8,39 @@ import { MenuComponent } from './home-page/menu/menu.component';
 import { MenubarModule } from 'primeng/menubar';
 import { CarouselModule } from 'primeng/carousel';
 import { FeaturesComponent } from './home-page/features/features.component';
+import { ContactComponent } from './home-page/contact/contact.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { EmailService } from './services/email.service';
+import { MessagesModule } from 'primeng/messages';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     MenuComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MenubarModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule,
+    HttpClientModule,
+    MessagesModule,
+    InputTextModule,
+    InputTextareaModule,
+    ButtonModule,
   ],
-  providers: [],
+  providers: [
+    EmailService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

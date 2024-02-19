@@ -1,0 +1,28 @@
+<!-- <p>works</p> -->
+
+<form #emailForm="ngForm" appIdentityRevealed (submit)="sendEmail($event)" class="contact-form line-height-3">
+  <h3>Hi,</h3>
+  <span>I am</span>
+
+  <input pInputText type="text" name="userName" placeholder="name" required class="mx-2"
+  [(ngModel)]="emailForm.userName">
+
+  from 
+  <input pInputText [(ngModel)]="emailForm.company" type="text" name="company" placeholder="company" required class="mx-2">
+  <br>
+    
+  I am contacting you because
+  <textarea pInputTextarea required [(ngModel)]="emailForm.message" cols=39 name="message" placeholder="message" class="minw- m-2 vertical-align-middle"></textarea>
+  <br>
+
+  I look forward to your answer at email
+  <input pInputText [(ngModel)]="emailForm.userEmail" size=27 type="email" name="userEmail" placeholder="email" required class="mx-2">
+  <br>
+
+  <div class="mt-4 my-5">
+    <p-button label="Submit" [disabled]="emailForm.invalid !== null && emailForm.invalid"></p-button>
+  </div>
+  <div class="card">
+    <p-messages *ngIf="messages" [(value)]="messages" [enableService]="false" [closable]="false"></p-messages>
+  </div>
+</form>

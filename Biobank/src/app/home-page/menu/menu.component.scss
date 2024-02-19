@@ -1,12 +1,23 @@
+$white: #fff;
+$beige: #f7bb93;
+$turquoise: #54ccb4;
+$gray: #dee2e6;
+
+
 :host ::ng-deep {
     .p-menubar {
-        background-color: #54ccb4;
-        border-radius: 0;
+      background-color: $turquoise;
+      border: 0;
+      border-bottom: 1px solid #dee2e6;
+      border-radius: 0;
+      width: 100%;
     }
 
-    // p-menubarsub.p-element {
-    //     width: 95%;
-    // };
+    p-menubarsub {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    };
 
     .p-menubar-root-list {
         justify-content: space-between;
@@ -30,16 +41,16 @@
 
         .p-menubar-root-list {
             padding: 0.5rem;
-            background: #54ccb4;
+            background: $turquoise;
         }
 
         .p-menubar-button {
-            color: #f7bb93;
+            color: $beige;
         }
 
         .p-menubar-root-list {
             border-radius: 6px; 
-            border-top: 2px solid #f7bb93;
+            border-top: 2px solid $beige;
         }
 
     }
@@ -52,11 +63,6 @@
 }
 
 /////////////////////////////////////
-
-//colors
-$red: #E1332D;
-$white: #fff;
-
 //base styles
 
 * {
@@ -65,7 +71,6 @@ $white: #fff;
   transition-duration: .6s;
   transition-timing-function: ease;
 }
-
     
 // Main wrap
 .buttons {
@@ -109,27 +114,11 @@ p {
     top: 0;
     transform: translate(0, 0);
   }
-  
-  a {
-    background: rgba($white, 0);
-    border-bottom: 1px solid;
-    color: $white;
-    line-height: 1.4;
-    padding: .25em;
-    text-decoration: none;
-    
-    &:hover {
-      background: rgba($white, 1);
-      color: $red;
-    }
-  }
 }
+
 //button styles
-
-
-//default button
 .btn {
-  color: #fff;
+  color: $white;
   cursor: pointer;
   // display: block;
   font-size:16px;
@@ -166,7 +155,7 @@ p {
 .btn-2:after,
 .btn-2:before {
   backface-visibility: hidden;
-  border: 1px solid rgba( #f7bb93, 0);
+  border: 1px solid rgba( $beige, 0);
   bottom: 0px;
   content: " ";
   display: block;
@@ -179,7 +168,7 @@ p {
 .btn-2:hover:after,
 .btn-2:hover:before {
   backface-visibility: hidden;
-  border-color:  #f7bb93;
+  border-color:  $beige;
   transition: width 350ms ease-in-out;
   width: 70%;
 }

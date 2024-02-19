@@ -1,5 +1,4 @@
-import { Component, ElementRef, Input } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { Component, ElementRef} from '@angular/core';
 
 
 @Component({

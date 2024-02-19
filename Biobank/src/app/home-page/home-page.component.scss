@@ -1,41 +1,70 @@
+$dark: #282828 !default;
+$white: #fff;
+$beige: #f7bb93;
+$turquoise: #54ccb4;
+$gray: #dee2e6;
+
+
+:host ::ng-deep {
+    .menu-border-style {
+        box-sizing: border-box;
+        border-top: 1px solid $gray;
+        border-bottom: 1px solid $gray;
+    }
+}
+
 .dark-text {
-    color: #282828;
+    color: $dark;
 }
 
 .white-text {
-    color: #ffffff;
+    color: $white;
 }
 
 .beige-bg {
-    background-color: #f7bb93;
+    background-color: $beige;
 }
 
 .turquoise-bg {
-    background-color: #54ccb4;
+    background-color: $turquoise;
 }
 
 .dark-bg {
-    background-color: #282828;
+    background-color: $dark;
 }
 
 .surface-200-bg {
     background-color: var(surface-200);
 }
 
+// .video-container {
+//     position: relative;
+//     width: 100%;
+//     padding-bottom: 56.25%; /* 16:9 arányhoz tartozó padding-bottom érték */
+//     height: 450px;
+//     z-index: 0;
+// }
+  
+// .video-container iframe {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 800px;
+//     height: 450px;
+// }
+
 .video-container {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%; /* 16:9 arányhoz tartozó padding-bottom érték */
     height: 0;
-    z-index: 0;
-}
+  }
   
-.video-container iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-}
-
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
