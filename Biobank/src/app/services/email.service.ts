@@ -20,9 +20,3 @@ export class EmailService {
     return emailjs.send('service_jfgatfv', 'template_ze9iv0a', templateParams, '1tStIbhiFy7Y4aKWO');
   }
 }
-
-// emailjs.send("service_jfgatfv","template_ze9iv0a",{
-//   to_name: "IBT",
-//   from_name: "PP",
-//   message: "yxcvb",
-//   });

@@ -3,7 +3,6 @@ $beige: #f7bb93;
 $turquoise: #54ccb4;
 $gray: #dee2e6;
 
-
 :host ::ng-deep {
     .p-menubar {
       background-color: $turquoise;
@@ -11,6 +10,8 @@ $gray: #dee2e6;
       border-bottom: 1px solid #dee2e6;
       border-radius: 0;
       width: 100%;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     p-menubarsub {
@@ -36,8 +37,11 @@ $gray: #dee2e6;
         background: transparent;
     }
 
-
     @media screen and (max-width: 960px) {
+
+        .p-menubar {
+          min-height: 2.8rem;
+        }
 
         .p-menubar-root-list {
             padding: 0.5rem;
@@ -46,20 +50,20 @@ $gray: #dee2e6;
 
         .p-menubar-button {
             color: $beige;
+            position: absolute!important;
+            right: 45%!important;
         }
 
         .p-menubar-root-list {
             border-radius: 6px; 
             border-top: 2px solid $beige;
         }
-
     }
-
 }
 
- .item {
-    min-width: 9rem;
-    text-align: center;
+.item {
+  min-width: 9rem;
+  text-align: center;
 }
 
 /////////////////////////////////////
@@ -120,24 +124,15 @@ p {
 .btn {
   color: $white;
   cursor: pointer;
-  // display: block;
   font-size:16px;
   font-weight: 400;
   line-height: 45px;
   margin: 0;
-  //max-width: 160px; 
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  width: 100%; 
-
-  
-  @media(min-width: 600px) {
-    margin: 0 1em;
-  }
   
   &:hover { text-decoration: none; }
-  
 }
 
 ////////////////////////////
@@ -178,3 +173,4 @@ p {
   top: 0;
   width: 70%;
 }
+

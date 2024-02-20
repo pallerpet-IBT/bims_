@@ -7,27 +7,35 @@ import { Component } from '@angular/core';
 })
 export class FeaturesComponent {
 
-  products: any[];
+  specimen: any;
+  aliquots: any[];
 
   responsiveOptions: any[] | undefined;
 
   constructor() {
 
-    this.products = [
+    this.specimen = {
+      title: "Traceability of each specimen and aliquot through their entire lifespan",
+      description: `Seamless integration to various input data sources (e.g. spreadsheets, database platforms, or other data management systems) ensuring the ability to continuously evolving biobank needs.`,
+      images: [{ name: 'specimen_list.png' }, { name: 'specimen_clinical_assessment.png' }, { name: 'specimen_clinical_diagnosis.png'}]
+     };
+
+    this.aliquots = [
       {
-      name: 'Description for feature 1, description for feature 1, description for feature 1',
-      image: 'bamboo-watch.jpg',
-      price: 65,
+      title: "Traceability of each specimen and aliquot through their entire lifespan",
+      description: `The modular nature of our solution allows for scalability and flexibility, making it possible to integrate new functionalities and technologies as they emerge.
+              This ensures that our clients' systems remain at the cutting edge of digital health innovation, adaptable to evolving healthcare demands and technological advancements.`,
+      image: 'specimen_list.png',
      },
      {
-      name: 'Description for feature 2, description for feature 2, description for feature 2',
-      image: 'blue-t-shirt.jpg',
-      price: 65,
+      description: 'Seamless integration to various input data sources (e.g. spreadsheets, database platforms, or other data management systems) ensuring the ability to continuously evolving biobank needs.',
+      image: 'specimen_clinical_assessment.png',
+      title: "Centralized storage management",
      },
      {
-      name: 'Description for feature 3, description for feature 3, description for feature 3',
-      image: 'gaming-set.jpg',
-      price: 65,
+      description: 'Description for feature 3, description for feature 3, description for feature 3',
+      image: 'specimen_clinical_diagnosis.png',
+      title: "Structured data organized in various modules provide wide range of insights",
      }
     ];
 
