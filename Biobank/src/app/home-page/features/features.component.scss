@@ -1,3 +1,20 @@
+$beige: #f7bb9380;
+
 .w-desc {
     min-width: 15rem;    
 }
+
+:host ::ng-deep {
+    .p-carousel-item.p-carousel-item-active {
+        display: flex;
+        align-items: center;
+    }
+}
+
+//@media only screen and (max-width: 767.9px) {}
+    .beige-bg {
+        padding: .4rem;
+        border-radius: .5rem;
+        background-color: $beige;
+    }
+

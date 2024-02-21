@@ -27,6 +27,10 @@ menu {
     padding: 0!important;
 }
 
+h1, h2, h3, h4, h5, p, li {
+    user-select: none;
+}
+
 // @keyframes slideInRight {
 //     0% {
 //       transform: translateX(100%);

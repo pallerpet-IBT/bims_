@@ -40,11 +40,15 @@ $light-blue: #bfdbfe70;
     background-color: $dark;
 }
 
+.white-bg {
+    background-color: $white;
+}
+
 .surface-200-bg {
     background-color: var(surface-200);
 }
 
-.light-blue-bg {
+.grad-beige-bg {
     background: rgb(255,255,255);
     background: linear-gradient(60deg, rgb(255, 255, 255) 24%, rgb(255 255 255) 71%, #f7bb93 100%);
 }
@@ -52,6 +56,11 @@ $light-blue: #bfdbfe70;
 .head-img {
     height: 100%;
     max-height: 12rem;
+
+    @media screen and (min-width: 1199.9px) {
+        max-height: 14rem;
+    }
+
 }
 
 .video-container {
@@ -74,13 +83,8 @@ height: 100%;
     position: absolute;
     left:0;
     top: 0;
-    height: 36%;
+    height: 100%;
     overflow: hidden;
-    //background-color: rgba(255, 0, 0, 0.182) ;
-
-    @media only screen and (min-width: 1300px) {
-        height: 33%;
-    }
 }
 
 .about-img {
@@ -103,18 +107,22 @@ height: 100%;
 }
 
 .w-page {
-    max-width: 1600px;
+    max-width: 2000px;
+}
+
+.max-w-adv {
+    max-width: 520px;
 }
 
 .our-team {
     padding: 2rem;
     background-image: url("../../assets/images/beige_bg.png");
-    background-size: cover; /* Az arányok megtartásával a háttérkép teljes területet elfoglal */
-    background-position: center; /* A háttérkép középre igazítása */
+    background-size: cover;
+    background-position: center;
 }
 
 @media only screen and (max-width: 767.9px) {
-    .light-blue-bg {
+    .grad-beige-bg {
         background: none;
     }
 
@@ -122,7 +130,6 @@ height: 100%;
         height: 100%;
         max-height: none;
         width: 100%;
-        //height: -webkit-fill-available;
     }
 
     .head-container {
@@ -132,14 +139,6 @@ height: 100%;
         padding: .5rem;
         right: 0;
         width: 80%;
-    }
-
-    .about-img-container {
-        width: 100%;
-        position: absolute;
-        left:0;
-        height: 45%;
-        overflow: hidden;
     }
 
     .about-img {

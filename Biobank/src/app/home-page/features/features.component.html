@@ -1,15 +1,13 @@
 <h2>FEATURES</h2>
-<h4 class="text-justify">The modular nature of our solution allows for scalability and flexibility, 
+<h4 class="text-justify line-height-4">The modular nature of our solution allows for scalability and flexibility, 
     making it possible to integrate new functionalities and technologies as they emerge. 
     This ensures that our clients' systems remain at the cutting edge of digital health innovation, 
     adaptable to evolving healthcare demands and technological advancements. 
 </h4>
-<div class="flex flex-row align-items-start">
-    <div class="flex flex-column w-4">
-        <h4>{{ specimen.title }}</h4>
-        <div class="mt-2">
-            <p class="w-desc">{{ specimen.description }}</p>
-        </div>
+<div class="flex flex-column align-items-center md:flex-row md:align-items-start">
+    <div class="flex flex-column md:w-4">
+        <h4 class="m-0 line-height-3 beige-bg">{{ specimen.title }}</h4>
+        <p class="w-desc mt-1 line-height-3 text-justify">{{ specimen.description }}</p>
     </div>
     <p-carousel [value]="specimen.images"
         [numVisible]="1"
@@ -28,44 +26,94 @@
     </p-carousel>
 </div>
 
-<!-- <div class="flex flex-row align-items-center lg:ml-4">
-    <div class="mb-7">
-        <h4>Feature 2</h4>
-        <p class="">Description for feature 2, description for feature 2, description for feature 2</p>
+<div class="flex flex-column align-items-center md:flex-row md:align-items-start">
+    <div class="flex flex-column md:w-4">
+        <h4 class="m-0 line-height-3 beige-bg">{{ aliquot.title }}</h4>
+        <p class="w-desc mt-1 line-height-3 text-justify">{{ aliquot.description }}</p>
     </div>
-    <p-carousel [value]="aliquots"
-        [numVisible]="1"
-        [numScroll]="1" [circular]="true"
-        [responsiveOptions]="responsiveOptions"
-        [autoplayInterval]=8000
-        [style]="{'z-index':'1'}">
-    
-        <ng-template let-aliquot pTemplate="item">
-            <div class="border-1 surface-border border-round m-2 text-center p-1">
-                <div class="align-items-center">
-                    <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ aliquot.image }}" [alt]="aliquot.name" class="w-full shadow-2" />
-                </div>
-            </div>
-        </ng-template>
-    </p-carousel>
-</div>
-
-<div class="flex flex-row align-items-center lg:ml-4">
-    <div class="mb-7">
-        <h4>Feature 3</h4>
-        <p class="">Description for feature 3, description for feature 3, description for feature 3</p>
-    </div>
-    <p-carousel [value]="products"
+    <p-carousel [value]="aliquot.images"
         [numVisible]="1"
         [numScroll]="1" [circular]="true"
         [responsiveOptions]="responsiveOptions"
         [autoplayInterval]=10000
         [style]="{'z-index':'1'}">
     
-        <ng-template let-product pTemplate="item">
+        <ng-template let-image pTemplate="item">
             <div class="border-1 surface-border border-round m-2 text-center p-1">
                 <div class="align-items-center">
-                    <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-full shadow-2" />
+                    <img src="../../../assets/images/features/{{ image.name }}" [alt]="image.name" class="w-full shadow-2" />
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
+<!-- 
+<div class="flex flex-row align-items-start">
+    <div class="flex flex-column w-4">
+        <h4 class="m-0 line-height-3">{{ aliquot.title }}</h4>
+        <div class="mt-1">
+            <p class="w-desc line-height-3">{{ aliquot.description }}</p>
+        </div>
+    </div>
+    <p-carousel [value]="aliquot.images"
+        [numVisible]="1"
+        [numScroll]="1" [circular]="true"
+        [responsiveOptions]="responsiveOptions"
+        [autoplayInterval]=8000
+        [style]="{'z-index':'1'}">
+    
+        <ng-template let-image pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center p-1">
+                <div class="align-items-center">
+                    <img src="../../../assets/images/features/{{ image.name }}" [alt]="image.name" class="w-full shadow-2" />
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
+
+<div class="flex flex-row align-items-start">
+    <div class="flex flex-column w-4">
+        <h4 class="m-0 line-height-3">{{ report.title }}</h4>
+        <div class="mt-1">
+            <p class="w-desc line-height-3">{{ report.description }}</p>
+        </div>
+    </div>
+    <p-carousel [value]="report.images"
+        [numVisible]="1"
+        [numScroll]="1" [circular]="true"
+        [responsiveOptions]="responsiveOptions"
+        [autoplayInterval]=12000
+        [style]="{'z-index':'1'}">
+    
+        <ng-template let-image pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center p-1">
+                <div class="align-items-center">
+                    <img src="../../../assets/images/features/{{ image.name }}" [alt]="image.name" class="w-full shadow-2" />
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
+
+<div class="flex flex-row align-items-start">
+    <div class="flex flex-column w-4">
+        <h4 class="m-0 line-height-3">{{ userFunctions.title }}</h4>
+        <div class="mt-1">
+            <p class="w-desc line-height-3">{{ userFunctions.description }}</p>
+        </div>
+    </div>
+    <p-carousel [value]="userFunctions.images"
+        [numVisible]="1"
+        [numScroll]="1" [circular]="true"
+        [responsiveOptions]="responsiveOptions"
+        [autoplayInterval]=12000
+        [style]="{'z-index':'1'}">
+    
+        <ng-template let-image pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center p-1">
+                <div class="align-items-center">
+                    <img src="../../../assets/images/features/{{ image.name }}" [alt]="image.name" class="w-full shadow-2" />
                 </div>
             </div>
         </ng-template>

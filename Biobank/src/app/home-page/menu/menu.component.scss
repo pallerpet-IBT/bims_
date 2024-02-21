@@ -51,7 +51,7 @@ $gray: #dee2e6;
         .p-menubar-button {
             color: $beige;
             position: absolute!important;
-            right: 45%!important;
+            right: calc(50% - 10px)!important;
         }
 
         .p-menubar-root-list {
