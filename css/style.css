@@ -186,24 +186,22 @@ advantagess
 	font-size: 45px;
 	margin-bottom: 25px;
     min-width: 6rem;
+    display: inline-block;
+    
 }
 .advantages-info{
 	margin-bottom: 20px;
 }
 .icon-info {
     display: inline;
-}
-.icon-info h4{
-    display: inline;
-	padding-bottom: 15px;
+    display: inline-block;
 }
 .icon-info p{
 	font-size: 15px !important;
 }
-.icon-info span{
+.icon-info-span{
 	font-size: 1.75rem!important;
-    color: #222222;
-    white-space: nowrap;
+    color: #222222!important;
 }
 /***************************************
 cta-1
