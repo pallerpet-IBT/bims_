@@ -477,15 +477,31 @@ footer
 .bglight-blue {
     background-color: #3498DB;
 }
+.bglight-blue:hover {
+    background-color: #fff;
+}
 .bgred {
     background-color: #E74C3C;
 }
 .bgdark-blue {
+    background-color: #fff;
+}
+.bgdark-blue:hover {
     background-color: #2C3E50;
 }
-.bglight-blue {
-    background-color: #3498DB;
+.social-icon a  {
+    color: #fff;
 }
+.social-icon a:hover  {
+    color: #3498DB;
+}
+.social-icon a.bgdark-blue-link {
+    color: #2C3E50;
+}
+.social-icon a.bgdark-blue-link:hover {
+    color: #fff;
+}
+
 .top-footer {
     padding: 40px 0px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
