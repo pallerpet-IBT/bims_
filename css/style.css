@@ -186,14 +186,14 @@ banner
     display: inline-block;
 }
 /***************************************
-services
+advantagess
 ***************************************/
 .icon i{
 	color: #0cb8b6;
 	font-size: 45px;
 	margin-bottom: 25px;
 }
-.service-info{
+.advantages-info{
 	margin-bottom: 20px;
 }
 .icon-info h4{
@@ -288,9 +288,9 @@ doctor team
     padding-bottom: 10px;
 }
 /***************************************
-testimonial
+ourTeam
 ***************************************/
-#testimonial{
+#ourTeam{
     background-color: #eee;
 }
 .testi-details {
@@ -510,7 +510,7 @@ footer
     border: 0px;
     border-bottom: 1px solid #fff;
     }
-    .service-info{
+    .advantages-info{
         margin-top: 20px;
         margin-bottom: 0px;
     }
