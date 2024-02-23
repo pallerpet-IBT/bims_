@@ -160,10 +160,14 @@ banner
 .btn-appoint, .btn-appoint:hover, .btn-appoint:focus{
 	margin-top: 30px;
 	padding: 10px 20px;
-	font-size: 12px;
+	font-size: 1.75rem;
 	background-color: rgba(12, 184, 182, 0.91);
 	border-radius: 3px;
 	color: #fff;
+}
+.btn-appoint:hover, .btn-appoint:focus{
+	background-color: rgba(12, 184, 182, 0.6);
+	color: #dad9d9;
 }
 .overlay-detail a i {
     text-align: center;
@@ -187,9 +191,10 @@ advantages
 .icon i {
 	color: #0cb8b6;
 	font-size: 45px;
-	/* margin-bottom: 25px; */
+	text-align: center;
     min-width: 6rem;
     display: inline-block;
+    margin-right: 0.5rem;
 }
 .advantages-info{
 	margin-bottom: 20px;
@@ -403,6 +408,10 @@ contact us
 ***************************************/
 .space {
     margin-top: 40px;
+}
+.contanct-info {
+    display: flex;
+    align-items: center;
 }
 .btn-form, .btn-form:hover, .btn-form:focus {
     background-color: #0cb8b6;
