@@ -16,6 +16,28 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- <script>
+    $(document).ready(function(){
+    $('#screenshots').carousel({
+        interval: false // Az automatikus léptetés kikapcsolása
+    });
+
+    $('#screenshots').on('slide.bs.carousel', function () {
+        $('#screenshots').carousel('pause'); // A kézi váltás után a Carousel megáll
+    });
+  });
+  </script> -->
+    <!-- <script>
+      $(document).ready(function(){
+          $('#myCarousel').carousel({
+              interval: false // Az automatikus léptetés kikapcsolása
+          });
+  
+          $('#myCarousel').on('slide.bs.carousel', function () {
+              $('#myCarousel').carousel('pause'); // A kézi váltás után a Carousel megáll
+          });
+      });
+    </script> -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
@@ -172,12 +194,13 @@
   </section>
   <!--/ advantages-->
   <!-- features -->
+
   <section id="features" class="section-padding">
       <div class="container">
         <h2 class="ser-title">Features</h2>
         <hr class="botm-line">  
         <div class="space"></div>
-        <div id="screenshots" class="carousel slide" data-ride="carousel">
+        <div id="screenshots" class="carousel slide">
           <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#screenshots" data-slide-to="0" class="active"></li>
@@ -241,9 +264,7 @@
         </div>
       </div>
   </section>
-  
   <!-- / features -->
-
   <!--video-->
   <section id="video" class="section-padding">
     <div class="container">

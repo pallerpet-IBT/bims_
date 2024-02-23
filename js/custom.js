@@ -27,5 +27,9 @@
       $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
   });
-
 })(jQuery);
+
+
+
+
+
