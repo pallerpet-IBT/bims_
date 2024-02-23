@@ -256,6 +256,10 @@ features
 h3.feature-title {
     color: #fff;
 }
+.testClass{
+    width: 500px;
+    height: 500px;
+}
 /* .carousel-control.left {
     background-color: transparent!important;
 }
