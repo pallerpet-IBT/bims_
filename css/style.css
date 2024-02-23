@@ -178,15 +178,18 @@ banner
     display: inline-block;
 }
 /***************************************
-advantagess
+advantages
 ***************************************/
-.icon i{
+.icon {
+    display: flex;
+    align-items: center;
+}
+.icon i {
 	color: #0cb8b6;
 	font-size: 45px;
 	/* margin-bottom: 25px; */
     min-width: 6rem;
     display: inline-block;
-    
 }
 .advantages-info{
 	margin-bottom: 20px;
