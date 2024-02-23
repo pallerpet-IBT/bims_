@@ -248,6 +248,21 @@ td {
     font-size: 14px;
 }
 /***************************************
+features
+***************************************/
+#features{
+    background-color: rgba(238, 238, 238, 0.15);
+}
+h3.feature-title {
+    color: #fff;
+}
+/* .carousel-control.left {
+    background-color: transparent!important;
+}
+.carousel-control.right {
+    background-color: transparent!important;
+} */
+/***************************************
 about
 ***************************************/
 #about{
