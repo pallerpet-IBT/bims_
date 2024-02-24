@@ -253,18 +253,56 @@ features
 #features{
     background-color: rgba(238, 238, 238, 0.15);
 }
-h3.feature-title {
+h3.feature-title, p.feature-text {
     color: #fff;
+    margin: 2rem 0;
+}
+p.feature-text {
+    text-align: justify;
 }
 .text-left {
     text-align: left;
 }
-/* .carousel-control.left {
-    background-color: transparent!important;
+.carousel-inner{
+    background-color: #1D4C5B;
 }
-.carousel-control.right {
-    background-color: transparent!important;
-} */
+.carousel-control.left, .carousel-control.right {
+    width:0!important;
+}
+.carousel-caption {
+    bottom: 30px;
+    padding-bottom: 30px;
+    right: 8%;
+    left: 8%;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+.carousel-caption-first {
+    bottom: 120px;
+}
+.carousel-caption-second {
+    bottom: 40px;
+}
+.carousel-caption-fourth {
+    bottom: 1.5rem!important;
+}
+.carousel-indicators {
+    bottom: 1rem;
+    user-select: none;
+}
+.carousel-indicators li {
+    background: #f7bb93;
+    user-select: none;
+}
+.glyphicon-chevron-left {
+    margin-left: 75px!important;
+    color: #f7bb93!important;
+
+}
+.glyphicon-chevron-right {
+    margin-right: 75px!important;
+    color: #f7bb93!important;
+}
 /***************************************
 about
 ***************************************/
@@ -553,8 +591,188 @@ footer
     color: #0cb8b6;
     text-transform: none;
 }
-@media (min-width: 551px) and (max-width: 980px){
+@media (min-width: 992px) and (max-width: 1199.9px){
+    .carousel-caption {
+        bottom: 1.5rem;
+        padding-bottom: 20px;
+        right: 5%;
+        left: 5%;
+    }
+    .carousel-caption-first {
+        bottom: 5rem!important;
+    }
+    .carousel-caption-fourth {
+        bottom: 1rem!important;
+        font-size: 14px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    h3.feature-title{
+        margin: 1rem;
+        font-size: medium;
+    }
+    p.feature-text{
+        margin: 1rem;
+        font-size: medium;
+        line-height: 1.75rem;
+    }
+    .carousel-caption {
+        bottom: 2rem;
+        padding-bottom: 4px;
+        right: 3%;
+        left: 3%;
+    }
+    .carousel-caption-first {
+        bottom: 70px!important;
+    }
+    .carousel-caption-second {
+        bottom: 30px!important;
+    }
+    .carousel-caption-third {
+        bottom: 30px!important;
+    }
+    .carousel-caption-fourth {
+        bottom: 20px!important;
+    }
+    .carousel-indicators {
+        bottom: 0;
+        user-select: none;
+    }
+}
+@media (min-width: 575px) and (max-width: 767px){
+    h3.feature-title{
+        margin: 10px;
+        font-size: 16px;
+    }
+    p.feature-text{
+        font-size: 13px;
+        line-height: 1.5rem;
+        margin-top: 5px;
+    }
+    .carousel-caption {
+        bottom: 5px;
+        padding-bottom: 0;
+        right: 3%;
+        left: 3%;
+        font-size: 1.5rem!important;
+        line-height: 1.75rem!important;
+    }
+    .carousel-caption-first {
+        bottom: 15px!important;
+    }
+    .carousel-caption-second{
+        bottom: -10px;
+    }
+    .carousel-caption-third {
+        bottom: -15px;
+    }
+    .carousel-caption-fourth {
+        bottom: -15px!important;
+        font-size: 14px;
+    }
+    .carousel-indicators {
+        bottom: -40px;
+        left:0;
+        margin-left: 0;
+        user-select: none;
+        background-color: #1D4C5B;
+        width: 100%;
+        padding: 5px;
+    }
+    .glyphicon-chevron-left {
+        margin-left: 30px!important;
+    }
+    .glyphicon-chevron-right {
+        margin-right: 30px!important;
+    }
+}
+@media (min-width: 400px) and (max-width: 575px){
+    .carousel-inner{
+        height: 110vw;
+    }
+    .carousel-caption {
+        bottom: -125px!important;
+        font-size: 1.5rem!important;
+        line-height: 1.75rem!important;
+    }
+    .carousel-caption-third{
+        bottom: -165px!important;
+        font-size: 13px;
+    }
+    .carousel-caption-fourth {
+        bottom: -175px!important;
+        font-size: 13px;
+    }
+    h3.feature-title{
+        margin: 1.25rem!important;
+        font-size: 16px!important;
+    }
+    p.feature-text{
+        font-size: 13px!important;
+    }
+    .glyphicon-chevron-left {
+        margin-left: 25px!important;
+    }
+    .glyphicon-chevron-right {
+        margin-right: 25px!important;
+    }
+}
 
+@media (min-width: 220px) and (max-width: 399px){
+    .carousel-inner{
+        height: 120vw;
+    }
+    h3.feature-title{
+        margin: 1rem;
+        font-size: 14px;
+    }
+    p.feature-text{
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 11px;
+    }
+    .carousel-caption-first .feature-text,
+    .carousel-caption-second .feature-text{
+        font-size: 13px;
+    }
+    .carousel-caption {
+        bottom: -125px;
+        bottom: 0;
+        padding-bottom: 0;
+        right: 2%;
+        left: 2%;
+        /* background-color: #3498DB30; */
+        z-index: 10;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    .carousel-caption-first {
+        bottom: -90px!important;
+    }
+    .carousel-caption-second{
+        bottom: -100px!important;
+    }
+    .carousel-caption-third{
+        bottom: -110px!important;
+    }
+    .carousel-caption-fourth {
+        bottom: -125px!important;
+    }
+    .carousel-indicators {
+        bottom: 0;
+        left:0;
+        margin-left: 0;
+        user-select: none;
+        background-color: transparent!important;
+        width: 100%;
+        padding: 0;
+    }
+    .glyphicon-chevron-left {
+        margin-left: 20px!important;
+    }
+    .glyphicon-chevron-right {
+        margin-right: 20px!important;
+    }
 }
 @media (min-width: 220px) and (max-width: 551px){
     .testi-info{
