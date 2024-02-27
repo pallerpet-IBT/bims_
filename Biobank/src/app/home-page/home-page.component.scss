@@ -81,16 +81,16 @@ height: 100%;
 .about-img-container {
     width: 100%;
     position: absolute;
-    left:0;
+    //left:0;
     top: 0;
     height: 100%;
     overflow: hidden;
+    min-width: 100vw;
 }
 
 .about-img {
     position: absolute;
     width: 100vw;
-    min-width: 1400px;
     left: 0;
     max-height: 100%;
     margin: 0;
