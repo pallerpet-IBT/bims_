@@ -12,9 +12,58 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    function validateForm() {
+      var form = document.getElementById('contact-form');
+      var inputs = form.querySelectorAll('input, textarea');
+    
+      var isValid = true;
+    
+      inputs.forEach(function(input) {
+        var rule = input.getAttribute('data-rule');
+        var msg = input.getAttribute('data-msg');
+        var value = input.value.trim();
+    
+        if (rule === 'required' && value === '') {
+          showError(input, msg);
+          isValid = false;
+        } else if (rule === 'email' && !validateEmail(value)) {
+          showError(input, msg);
+          isValid = false;
+        } else if (rule === 'minlen' && value.length < parseInt(input.getAttribute('data-minlen'), 10)) {
+          showError(input, msg);
+          isValid = false;
+        } else {
+          hideError(input);
+        }
+      });
+    
+      return isValid;
+    }
+    
+    function showError(input, message) {
+      var parent = input.parentElement;
+      var validationMsg = parent.querySelector('.validation');
+      validationMsg.innerHTML = message;
+      validationMsg.style.display = 'block';
+    }
+    
+    function hideError(input) {
+      var parent = input.parentElement;
+      var validationMsg = parent.querySelector('.validation');
+      validationMsg.innerHTML = '';
+      validationMsg.style.display = 'none';
+    }
+    
+    function validateEmail(email) {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }
+    </script>
 </head>
 
 <body id="myPage" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="60">
@@ -22,16 +71,15 @@
   <section id="banner" class="banner">
     <div class="bg-color">
       <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
+        <div class="container-fluid px-5">
             <div class="navbar-header">
               <a href="#"><img src="img/logo.png" class="img-responsive" style="width: 140px; margin: 0"></a>
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
             </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 p-2 p-lg-0">
                 <li class="nav-item">
                   <a class="nav-link" href="#banner" aria-current="page">Home</a>
                 </li>
@@ -305,31 +353,35 @@
           <h2 class="ser-title">Contact us</h2>
           <hr class="botm-line">
         </div>
-        <div class="col-md-4 col-sm-4">
+        <div class="col-md-4 col-sm-12">
           <h3>Contact Info</h3>
           <div class="space"></div>
           <p class="contanct-info"><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>biobank@ibtconsulting.hu</p>
         </div>
-        <div class="col-md-8 col-sm-8 marb20">
+        <div class="col-md-8 col-sm-12 marb20">
           <div class="contact-info">
             <h3 class="cnt-ttl">Feel free to contact us.</h3>
             <div class="space"></div>
               <form id="contact-form" method="post" role="form" class="contactForm">
                 <div class="mb-3">
-                  <input type="text" name="userName" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="userName" class="form-control br-radius-zero" id="name" placeholder="Your Name" 
+                  data-rule="minlen:4" data-rule="" data-msg="Please enter at least 4 chars" required/>
                   <div class="validation"></div>
                 </div>
                 <div class="mb-3">
-                  <input type="email" class="form-control br-radius-zero" name="userEmail" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control br-radius-zero" name="userEmail" id="email" placeholder="Your Email" 
+                  data-rule="email" data-msg="Please enter a valid email" required/>
                   <div class="validation"></div>
                 </div>
                 <div class="mb-3">
-                  <input type="text" class="form-control br-radius-zero" name="company" id="company" placeholder="Company" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" class="form-control br-radius-zero" name="company" id="company" placeholder="Company" 
+                  data-rule="minlen:4" data-msg="Please enter at least 4 chars" required />
                   <div class="validation"></div>
                 </div>
                 <div class="mb-3">
-                  <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" 
-                            placeholder="I would like to ask for a personal live demonstration about ... "></textarea>
+                  <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="minlen:15" 
+                            data-msg="The given message must be at least 15 characters long." 
+                            placeholder="I would like to ask for a personal live demonstration about ... " required></textarea>
                   <div class="validation"></div>
                 </div>
                 <div class="form-action">
@@ -379,12 +431,16 @@
               <ul class="social-icon">
                 <a href="https://www.facebook.com/ibtconsultingkft/">
                   <li class="bglight-blue">
-                    <i class="fa fa-facebook"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
                   </li>
                   </a>
                 <a href="https://www.linkedin.com/company/ibtconsulting/" class="bgdark-blue-link">
                   <li class="bgdark-blue">
-                    <i class="fa fa-linkedin"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                    </svg>
                   </li>
                 </a>
               </ul>

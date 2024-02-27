@@ -108,6 +108,9 @@ banner
 	font-size: 14px;
 	font-weight: 300;
 }
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem #f7bb93;
+}
 #banner{
 	background: url('../img/bg_banner.png') no-repeat fixed;
 	background-size: cover;
@@ -187,7 +190,7 @@ advantages
 	font-size: 15px !important;
 }
 .icon-info-span {
-	font-size: 1.75rem!important;
+	font-size: 1.5rem!important;
     color: #222222!important;
     line-height: 2rem;
 }
@@ -272,10 +275,15 @@ features
 }
 h5.feature-title, p.feature-text {
     color: #fff;
-    margin: 2rem 0;
+    margin: 1rem 0;
+}
+h5.feature-title {
+    font-size: 1.5rem;
 }
 p.feature-text {
     text-align: justify;
+    font-size: 1.25rem;
+    line-height: normal;
 }
 .text-left {
     text-align: left;
@@ -287,6 +295,7 @@ p.feature-text {
     width:0!important;
 }
 .carousel-caption {
+    display: block!important;
     bottom: 30px;
     padding-bottom: 30px;
     right: 8%;
@@ -301,10 +310,17 @@ p.feature-text {
     bottom: 40px;
 }
 .carousel-caption-fourth {
-    bottom: 1.5rem!important;
+    bottom: 32px!important;
 }
 .carousel-indicators {
     bottom: 1rem;
+    left:0;
+    margin-left: 0;
+    user-select: none;
+    background-color: #1D4C5B;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 8px;
     user-select: none;
 }
 .carousel-indicators button {
@@ -459,13 +475,19 @@ contact us
     border-radius: 0px;
     padding: 10px 20px;
 }
+.btn-form:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
 .br-radius-zero {
     border-radius: 0px;
 }
 .form-control{
 	height: 40px;
 }
-
+textarea.form-control {
+    min-height: 5rem;
+}
 .validation {
     color: red;
     display:none;
@@ -496,6 +518,15 @@ contact us
 
 #sendmessage.show, #errormessage.show, .show {
 	display:block;
+}
+
+.form-action button:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease;
+}
+.form-control:focus{
+    border: 1px solid #f7bb93!important;
+    box-shadow: 0 0 0 0.15rem #f7bb9350;
 }
 
 
@@ -575,10 +606,28 @@ footer
     color: #0cb8b6;
     text-transform: none;
 }
+.social-icon li {
+    transition: transform 0.3s ease;
+}
+
+.social-icon li:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease;
+}
+  
+@media (min-width: 1200px) and (max-width: 1399.9px){
+    .carousel-caption-first {
+        bottom: 6rem!important;
+    }
+    .carousel-caption-second,
+    .carousel-caption-third {
+        bottom: 35px!important;
+    }
+}
 @media (min-width: 992px) and (max-width: 1199.9px){
     h5.feature-title{
         margin: 1rem;
-        font-size: medium;
+        font-size: 1.1rem;
     }
     p.feature-text{
         margin: .5rem;
@@ -606,7 +655,7 @@ footer
     }
     p.feature-text{
         margin: .5rem;
-        font-size: medium;
+        font-size: 0.9rem;
         line-height: 1.3rem;
     }
     .carousel-caption {
@@ -616,34 +665,38 @@ footer
         left: 3%;
     }
     .carousel-caption-first {
-        bottom: 50px!important;
+        bottom: 60px!important;
     }
     .carousel-caption-second {
-        bottom: 15px!important;
+        bottom: 30px!important;
     }
     .carousel-caption-third {
-        bottom: 10px!important;
+        bottom: 20px!important;
     }
     .carousel-caption-fourth {
-        bottom: 0px!important;
+        bottom: 10px!important;
     }
     .carousel-indicators {
-        bottom: -50px;
-        user-select: none;
+        bottom: -20px;
+        padding: 10px;
+        margin: 0!important;
     }
 }
-@media (min-width: 575px) and (max-width: 767px){
-    h3.feature-title{
-        margin: 10px;
-        font-size: 16px;
+@media (min-width: 576px) and (max-width: 767px){
+    .carousel-inner{
+        height: 100%;
+    }
+    h5.feature-title{
+        margin: 6px;
+        font-size: 13px;
     }
     p.feature-text{
         font-size: 13px;
-        line-height: 1.5rem;
-        margin-top: 5px;
+        line-height: 1rem;
+        margin-top: 0;
     }
     .carousel-caption {
-        bottom: 5px;
+        bottom: 0;
         padding-bottom: 0;
         right: 3%;
         left: 3%;
@@ -660,114 +713,45 @@ footer
         bottom: -15px;
     }
     .carousel-caption-fourth {
-        bottom: -15px!important;
-        font-size: 14px;
+        bottom: -16px!important;
     }
     .carousel-indicators {
-        bottom: -40px;
-        left:0;
+        bottom: -50px;
         margin-left: 0;
-        user-select: none;
-        background-color: #1D4C5B;
-        width: 100%;
-        padding: 5px;
-    }
-    .glyphicon-chevron-left {
-        margin-left: 30px!important;
-    }
-    .glyphicon-chevron-right {
-        margin-right: 30px!important;
+        padding-top: 0;
+        padding-bottom: 12px;
+        z-index: 0;
     }
 }
-@media (min-width: 400px) and (max-width: 575px){
+@media (min-width: 220px) and (max-width: 575.9px){
+    h5.feature-title{
+        margin: 8px 4px!important;
+        font-size: 4vw;
+    }
+    p.feature-text{
+        font-size: 3.5vw!important;
+        margin: 8px 0;
+        margin-bottom: 15px;
+    }
     .carousel-inner{
         height: 110vw;
     }
     .carousel-caption {
-        bottom: -125px!important;
+        bottom: -35vw!important;
         font-size: 1.5rem!important;
         line-height: 1.75rem!important;
     }
     .carousel-caption-third{
-        bottom: -165px!important;
-        font-size: 13px;
+        bottom: -39vw!important;
     }
     .carousel-caption-fourth {
-        bottom: -175px!important;
-        font-size: 13px;
-    }
-    h3.feature-title{
-        margin: 1.25rem!important;
-        font-size: 16px!important;
-    }
-    p.feature-text{
-        font-size: 13px!important;
-    }
-    .glyphicon-chevron-left {
-        margin-left: 25px!important;
-    }
-    .glyphicon-chevron-right {
-        margin-right: 25px!important;
-    }
-}
-
-@media (min-width: 220px) and (max-width: 399px){
-    .carousel-inner{
-        height: 120vw;
-    }
-    h3.feature-title{
-        margin: 1rem;
-        font-size: 14px;
-    }
-    p.feature-text{
-        margin-top: 5px;
-        margin-bottom: 0;
-        font-size: 11px;
-    }
-    .carousel-caption-first .feature-text,
-    .carousel-caption-second .feature-text{
-        font-size: 13px;
-    }
-    .carousel-caption {
-        bottom: -125px;
-        bottom: 0;
-        padding-bottom: 0;
-        right: 2%;
-        left: 2%;
-        /* background-color: #3498DB30; */
-        z-index: 10;
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-    }
-    .carousel-caption-first {
-        bottom: -90px!important;
-    }
-    .carousel-caption-second{
-        bottom: -100px!important;
-    }
-    .carousel-caption-third{
-        bottom: -110px!important;
-    }
-    .carousel-caption-fourth {
-        bottom: -125px!important;
+        bottom: -42vw!important;
     }
     .carousel-indicators {
-        bottom: 0;
-        left:0;
-        margin-left: 0;
-        user-select: none;
-        background-color: transparent!important;
-        width: 100%;
-        padding: 0;
+        bottom: -46px;
+        padding-bottom: 8px;
     }
-    .glyphicon-chevron-left {
-        margin-left: 20px!important;
-    }
-    .glyphicon-chevron-right {
-        margin-right: 20px!important;
-    }
-}
-@media (min-width: 220px) and (max-width: 551px){
+
     .testi-info{
         margin-bottom: 20px;
     }
