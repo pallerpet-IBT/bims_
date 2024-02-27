@@ -16,54 +16,6 @@
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    function validateForm() {
-      var form = document.getElementById('contact-form');
-      var inputs = form.querySelectorAll('input, textarea');
-    
-      var isValid = true;
-    
-      inputs.forEach(function(input) {
-        var rule = input.getAttribute('data-rule');
-        var msg = input.getAttribute('data-msg');
-        var value = input.value.trim();
-    
-        if (rule === 'required' && value === '') {
-          showError(input, msg);
-          isValid = false;
-        } else if (rule === 'email' && !validateEmail(value)) {
-          showError(input, msg);
-          isValid = false;
-        } else if (rule === 'minlen' && value.length < parseInt(input.getAttribute('data-minlen'), 10)) {
-          showError(input, msg);
-          isValid = false;
-        } else {
-          hideError(input);
-        }
-      });
-    
-      return isValid;
-    }
-    
-    function showError(input, message) {
-      var parent = input.parentElement;
-      var validationMsg = parent.querySelector('.validation');
-      validationMsg.innerHTML = message;
-      validationMsg.style.display = 'block';
-    }
-    
-    function hideError(input) {
-      var parent = input.parentElement;
-      var validationMsg = parent.querySelector('.validation');
-      validationMsg.innerHTML = '';
-      validationMsg.style.display = 'none';
-    }
-    
-    function validateEmail(email) {
-      var re = /\S+@\S+\.\S+/;
-      return re.test(email);
-    }
-    </script>
 </head>
 
 <body id="myPage" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="60">
@@ -71,7 +23,7 @@
   <section id="banner" class="banner">
     <div class="bg-color">
       <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid px-5">
+        <div class="container-fluid px-0 px-3 px-md-5">
             <div class="navbar-header">
               <a href="#"><img src="img/logo.png" class="img-responsive" style="width: 140px; margin: 0"></a>
             </div>
@@ -362,7 +314,7 @@
           <div class="contact-info">
             <h3 class="cnt-ttl">Feel free to contact us.</h3>
             <div class="space"></div>
-              <form id="contact-form" method="post" role="form" class="contactForm">
+              <form id="contact-form" method="post" role="form">
                 <div class="mb-3">
                   <input type="text" name="userName" class="form-control br-radius-zero" id="name" placeholder="Your Name" 
                   data-rule="minlen:4" data-rule="" data-msg="Please enter at least 4 chars" required/>

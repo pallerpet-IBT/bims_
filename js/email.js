@@ -1,8 +1,8 @@
 
 (function() {
     emailjs.init({
-    publicKey: "zAwfRINytFJAZfZ1l" //IBT
-    //publicKey: "8MIUeQwrJghC6u4Xl" //paller.peter
+        //publicKey: "8MIUeQwrJghC6u4Xl" //paller.peter
+        publicKey: "zAwfRINytFJAZfZ1l" //IBT
     });
 })();
 
