@@ -35,38 +35,6 @@ window.onload = function() {
     });
 }
 
-// window.onload = function() {
-//     document.getElementById('contact-form').addEventListener('submit', function(event) {
-//         event.preventDefault();
-
-//         if(validateForm()) {
-//             var messageContainer = document.getElementById("emailResponseContainer");
-//             var message = document.getElementById("emailResponse");
-
-//             var formData = new FormData(this);
-
-//             fetch('your_emailjs_endpoint', {
-//                 method: 'POST',
-//                 body: formData
-//             })
-//             .then(response => {
-//                 if (response.ok) {
-//                     message.innerHTML = "The message has been successfully sent.";
-//                     messageContainer.classList.add("alert-success");
-//                     messageContainer.classList.remove("hidden");
-//                 } else {
-//                     message.innerHTML = "The email sending failed. Please contact us at the provided email address.";
-//                     messageContainer.classList.add("alert-danger");
-//                     messageContainer.classList.remove("hidden");
-//                 }
-//             })
-//             .catch(error => {
-//                 console.error('Error:', error);
-//             });
-//         }
-//     });
-// }
-
 function validateForm() {
     var form = document.getElementById('contact-form');
     var inputs = form.querySelectorAll('input, textarea');
