@@ -107,8 +107,21 @@ banner
 	font-size: 14px;
 	font-weight: 300;
 }
+.navbar-toggler:hover .navbar-toggler-icon  {
+    filter: invert(1);
+}
+.navbar-toggler:hover, .navbar-toggler.collapsed:hover {
+    box-shadow: 0 0 0 0.15rem #dad9d9;
+}
 .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar-toggler[aria-expanded="true"] {
+    background-color:#dad9d971;
     box-shadow: 0 0 0 0.15rem #f7bb93;
+}
+.navbar-toggler-icon {
+    color: #dad9d9;
 }
 #banner{
 	background: url('../img/bg_banner.png') no-repeat fixed;
