@@ -26,3 +26,14 @@ document.addEventListener("DOMContentLoaded", function() {
 //     $('.navbar-collapse').collapse('hide');
 //   }
 // });
+
+//hide video until first click
+document.addEventListener("DOMContentLoaded", function() {
+  var videoCover = document.getElementById("videoCover");
+  var videoIframe = document.getElementById("videoIframe");
+
+  videoCover.addEventListener("click", function() {
+      videoIframe.contentWindow.postMessage('{"method":"play"}', '*'); 
+      videoCover.style.display = "none"; 
+  });
+});
