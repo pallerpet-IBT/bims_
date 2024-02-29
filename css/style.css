@@ -47,6 +47,10 @@ hr.botm-line {
     margin: 20px 0 20px 0;
     opacity: 1;
 }
+p.default {
+    line-height: 2.5rem;
+    text-align: justify;
+}
 /***************************************
 banner
 ***************************************/
@@ -69,14 +73,13 @@ banner
 .navbar li {
     white-space: nowrap;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 	.navbar-collapse {
 		background: rgba(28,74,90, 0.9);
 	}
 }
 .top-nav-collapse {
     padding: 0;
-    background: rgba(28,74,90, 0.9);
 }
 
 .white, .white:hover, .white:focus
@@ -124,7 +127,7 @@ banner
     color: #dad9d9;
 }
 #banner{
-	background: url('../img/bg_banner.png') no-repeat fixed;
+	background: url('../img/banner.png') no-repeat fixed;
 	background-size: cover;
 	min-height: 650px;
 	position: relative;
@@ -279,9 +282,6 @@ about
 .more-features-box-text-description{
 	margin-left: 20px;
 	margin-bottom: 35px;
-}
-.sec-para{
-	padding-bottom: 10px;
 }
 /***************************************
 features
@@ -552,6 +552,9 @@ footer
 #footer{
 	background-color: #325C6A;
 }
+footer ol, footer ul {
+    padding-left: 1rem;
+}
 .ftr-tle {
     height: 50px;
 }
@@ -816,5 +819,8 @@ footer
         font-size: 1.5rem!important;
         font-weight: 600;
         vertical-align: middle;
+    }
+    footer ol, footer ul {
+        padding-left: 1rem;
     }
 }
