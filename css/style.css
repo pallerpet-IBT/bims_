@@ -552,7 +552,7 @@ footer
 #footer{
 	background-color: #325C6A;
 }
-footer ol, footer ul {
+footer ol, footer ul, footer p {
     padding-left: 1rem;
 }
 .ftr-tle {
