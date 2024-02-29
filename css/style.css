@@ -371,7 +371,7 @@ video
     width: 100%; 
     height: 100%; 
     background-color: #F6FAFD;
-    background-image: url("/img/video_cover.jpg");
+    background-image: url("img/video_cover.jpg");
     background-size: cover;
     z-index: 1; 
 }
